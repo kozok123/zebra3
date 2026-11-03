@@ -111,8 +111,8 @@ public class MainActivity extends AppCompatActivity {
     }
     private void dodajPytanie() {
         pytania = new ArrayList<>();
-        pytania.add(new pytanie(R.drawable.tygrys, "czy tygrys jest królem zwierząt?", true));
-        pytania.add(new pytanie(R.drawable.zyrafa, "Czy żyrafa śpi zawsze na stojąco?", false));
-        pytania.add(new pytanie(R.drawable.okapi, "Czy okapi było znane w 17 wieku?", false));
+        pytania.add(new pytanie(R.drawable.tygrys, "czy tygrys jest królem zwierząt?", true, "a pamiętasz bajke o simbie"));
+        pytania.add(new pytanie(R.drawable.zyrafa, "Czy żyrafa śpi zawsze na stojąco?", false, "Może spi może nie"));
+        pytania.add(new pytanie(R.drawable.okapi, "Czy okapi było znane w 17 wieku?", false, "Okapi zaobserwowano pierwszy raz w lasach równikowych w 1985 roku."));
     }
 }

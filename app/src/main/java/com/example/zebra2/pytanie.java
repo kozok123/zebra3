@@ -7,6 +7,18 @@ public class pytanie {
 
     private boolean czyPoprawnie;
 
+    private String podpowiedz;
+
+    public pytanie(long idZdjecia, String trescPytania, boolean poprawnaodpowiedz, String podpowiedz) {
+        this.idZdjecia = idZdjecia;
+        this.trescPytania = trescPytania;
+        this.poprawnaodpowiedz = poprawnaodpowiedz;
+        this.czyPoprawnie = czyPoprawnie;
+        this.podpowiedz = podpowiedz;
+        czyPoprawnie = false;
+        podpowiedz = "Brak podpowiedzi.";
+    }
+
     public pytanie(long idZdjecia, String trescPytania, boolean poprawnaodpowiedz) {
         this.idZdjecia = idZdjecia;
         this.trescPytania = trescPytania;
