@@ -2,6 +2,7 @@ package com.example.zebra2;
 
 import static android.view.View.INVISIBLE;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList<pytanie> pytania;
+    private static ArrayList<pytanie> pytania;
     private TextView textView;
     private ImageView imageView;
     private Button buttonTak, buttonNie, buttonDalej, buttonPodpowiedz;
@@ -86,7 +87,9 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        Intent intent = new Intent(MainActivity.this,PodpowiedzActivity.class);
+                        intent.putExtra("NR", aktualne);
+                        startActivity(intent);
                     }
                 }
         );
@@ -109,10 +112,12 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(pytanie.getTrescPytania());
         imageView.setImageResource((int)(pytanie.getIdZdjecia()));
     }
-    private void dodajPytanie() {
+    protected static ArrayList<pytanie> dodajPytanie() {
         pytania = new ArrayList<>();
         pytania.add(new pytanie(R.drawable.tygrys, "czy tygrys jest królem zwierząt?", true, "a pamiętasz bajke o simbie"));
         pytania.add(new pytanie(R.drawable.zyrafa, "Czy żyrafa śpi zawsze na stojąco?", false, "Może spi może nie"));
         pytania.add(new pytanie(R.drawable.okapi, "Czy okapi było znane w 17 wieku?", false, "Okapi zaobserwowano pierwszy raz w lasach równikowych w 1985 roku."));
+        return pytania;
     }
+
 }

@@ -46,4 +46,7 @@ public class pytanie {
         this.czyPoprawnie = czyPoprawnie;
     }
 
+    public String getPodpowiedz() {
+        return podpowiedz;
+    }
 }
