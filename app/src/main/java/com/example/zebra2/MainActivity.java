@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<pytanie> pytania;
     private TextView textView;
     private ImageView imageView;
-    private Button buttonTak, buttonNie, buttonDalej;
+    private Button buttonTak, buttonNie, buttonDalej, buttonPodpowiedz;
     private int aktualne =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         buttonTak = findViewById(R.id.button);
         buttonNie = findViewById(R.id.button2);
         buttonDalej = findViewById(R.id.button4);
+        buttonPodpowiedz = findViewById(R.id.button3);
         imageView = findViewById(R.id.imageView);
         wypiszPytanie(0);
 
@@ -78,6 +79,14 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         sprawdzOpdowiedz(true);
+                    }
+                }
+        );
+        buttonPodpowiedz.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
                     }
                 }
         );
